@@ -1,15 +1,15 @@
-About eodatasets3
-=================
-
-Home: https://github.com/GeoscienceAustralia/eo-datasets
-
-Package license: Apache-2.0
+About eodatasets3-feedstock
+===========================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/eodatasets3-feedstock/blob/main/LICENSE.txt)
 
+Home: https://github.com/opendatacube/eo-datasets
+
+Package license: Apache-2.0
+
 Summary: Packaging, metadata and provenance for OpenDataCube EO3 datasets
 
-Development: https://github.com/GeoscienceAustralia/eo-datasets
+Development: https://github.com/opendatacube/eo-datasets
 
 Current build status
 ====================
@@ -146,4 +146,6 @@ Feedstock Maintainers
 =====================
 
 * [@Ariana-B](https://github.com/Ariana-B/)
+* [@SpacemanPaul](https://github.com/SpacemanPaul/)
+* [@omad](https://github.com/omad/)
 
