@@ -35,6 +35,7 @@ requirements:
     - ciso8601
     - click
     - defusedxml
+    - fiona
     - h5py
     - jsonschema >=3
     - numpy >=1.15.4
