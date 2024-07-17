@@ -1,5 +1,5 @@
 {% set name = "eodatasets3" %}
-{% set version = "0.30.5" %}
+{% set version = "0.30.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b025b3bcf679df2bac90c9feef4cc69baa8e320edc0265cf611c1d632ed2f9f8
+  sha256: deee12ea5401f711e12970aa0caf1fd9f19ce2856c821692672d852b1c5ae11f
 
 build:
   entry_points:
