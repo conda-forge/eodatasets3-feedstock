@@ -18,14 +18,15 @@ build:
     - eo3-to-stac = eodatasets3.scripts.tostac:run
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 2
 
 requirements:
   host:
     - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >={{ python_min }},<3.12
+    - python >={{ python_min }}
     - affine
     - attrs >=18.1
     - boltons
@@ -46,7 +47,7 @@ requirements:
     - shapely
     - structlog
     - xarray
-    - datacube
+    - datacube <=1.8.19
     - python-rapidjson
     - pystac >=1.1.0
 
