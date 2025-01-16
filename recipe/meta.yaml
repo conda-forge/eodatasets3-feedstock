@@ -47,7 +47,7 @@ requirements:
     - shapely
     - structlog
     - xarray
-    - datacube <=1.8.19
+    - datacube >=1.9.0
     - python-rapidjson
     - pystac >=1.1.0
 
