@@ -39,7 +39,7 @@ requirements:
     - fiona
     - h5py
     - jsonschema >=3
-    - numpy >=1.15.4
+    - numpy >=1.15.4,<2
     - pyproj
     - rasterio
     - ruamel.yaml
