@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 17944c3b63f6ea835c2ac5915914b7faf1e9a3739adc07166ed00e7b562ecdd2
 
 build:
@@ -18,14 +18,15 @@ build:
     - eo3-to-stac = eodatasets3.scripts.tostac:run
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 2
 
 requirements:
   host:
-    - python >=3.9,<3.12
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.9,<3.12
+    - python >={{ python_min }}
     - affine
     - attrs >=18.1
     - boltons
@@ -46,7 +47,7 @@ requirements:
     - shapely
     - structlog
     - xarray
-    - datacube
+    - datacube <=1.8.19
     - python-rapidjson
     - pystac >=1.1.0
 
@@ -62,6 +63,7 @@ test:
     - eo3-to-stac --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/opendatacube/eo-datasets
