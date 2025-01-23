@@ -1,5 +1,5 @@
 {% set name = "eodatasets3" %}
-{% set version = "1.9.0" %}
+{% set version = "1.9.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 699634012d4b1119372371285c6583aa9c38dd5a2c06bc5a4d78e7605f91cd3c
+  sha256: 5f5110cb95c09ed58bd1107428b7640160aa6683a4e5a41cc8156371839ab159
 
 build:
   entry_points:
@@ -18,7 +18,7 @@ build:
     - eo3-to-stac = eodatasets3.scripts.tostac:run
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   host:
