@@ -1,5 +1,6 @@
 {% set name = "eodatasets3" %}
 {% set version = "1.9.1" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -22,11 +23,11 @@ build:
 
 requirements:
   host:
-    - python = 3.10
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >= 3.10
+    - python >={{ python_min }}
     - affine
     - attrs >=18.1
     - boltons
