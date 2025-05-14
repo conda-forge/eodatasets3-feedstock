@@ -1,5 +1,5 @@
 {% set name = "eodatasets3" %}
-{% set version = "1.9.1" %}
+{% set version = "1.9.2" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5f5110cb95c09ed58bd1107428b7640160aa6683a4e5a41cc8156371839ab159
+  sha256: 72e472de3780a19c94e176ecca0e4ecda27844878907be952a32995e6ad07095
 
 build:
   entry_points:
@@ -40,10 +40,10 @@ requirements:
     - fiona
     - h5py
     - jsonschema >=3
-    - numpy >=1.15.4,<2
+    - numpy >=1.15.4
     - pyproj
     - rasterio
-    - ruamel.yaml
+    - ruamel.yaml<0.18
     - scipy
     - shapely
     - structlog
