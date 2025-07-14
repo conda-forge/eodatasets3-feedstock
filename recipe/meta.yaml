@@ -19,13 +19,14 @@ build:
     - eo3-to-stac = eodatasets3.scripts.tostac:run
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - python {{ python_min }}
     - pip
     - setuptools
+    - setuptools_scm >=6.2
   run:
     - python >={{ python_min }}
     - affine
