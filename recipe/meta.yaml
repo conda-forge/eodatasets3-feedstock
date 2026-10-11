@@ -1,5 +1,5 @@
 {% set name = "eodatasets3" %}
-{% set version = "1.9.3" %}
+{% set version = "1.9.7" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 478744686cb5e7de907785393a0eed0fdf165949b6638ab1563b07c674202e40
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 2f9601c93fd6c3be397a259b66c99d0081949c882812ab768200302897a8bf3c
 
 build:
   entry_points:
@@ -19,7 +19,7 @@ build:
     - eo3-to-stac = eodatasets3.scripts.tostac:run
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
